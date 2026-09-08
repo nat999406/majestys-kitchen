@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nat999406.github.io/majestys-kitchen/sitemap.xml
