@@ -1149,11 +1149,6 @@ footer a{
         <span id="subtotal">R0.00</span>
       </div>
 
-      <div class="total-row">
-        <span>Tax (8%)</span>
-        <span id="tax">R0.00</span>
-      </div>
-
       <div class="total-row grand">
         <span>Total</span>
         <span id="grandTotal">R0.00</span>
@@ -1555,9 +1550,6 @@ const cartItems =
 const subtotalEl =
   document.getElementById("subtotal");
 
-const taxEl =
-  document.getElementById("tax");
-
 const grandTotalEl =
   document.getElementById("grandTotal");
 
@@ -1818,20 +1810,14 @@ function renderCart(){
 
   }
 
-  const tax =
-    subtotal * 0.08;
-
   const total =
-    subtotal + tax;
+    subtotal;
 
   cartCount.textContent =
     itemCount;
 
   subtotalEl.textContent =
     money(subtotal);
-
-  taxEl.textContent =
-    money(tax);
 
   grandTotalEl.textContent =
     money(total);
@@ -2117,12 +2103,8 @@ document
 
     });
 
-
-    const tax =
-      subtotal * 0.08;
-
     const total =
-      subtotal + tax;
+  subtotal;
 
 
     let message =
